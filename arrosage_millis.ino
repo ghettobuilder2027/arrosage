@@ -1,8 +1,20 @@
-const int ledPin =  LED_BUILTIN;
+/*
+ *  Arrosage automatique à l'aide d'un esp 01 et d'une carte relay
+ *  
+ *  * Le relay fonctionne en inversé ( mettre la sortie en 0 pour activer
+ *  * Pour faire clignoter (contrôle que le programme tourne toujours), il faut
+ *    utiliser la sortie 0 pour le clignotement et la sortie 2 pour le relay
+ *  * Le timing se fait à l'aide de la fonction millis
+ *  * Un unsigned long fait environ 5O jours en secondes.
+ * 
+ */
+
+
+const int ledPin =  0;//LED_BUILTIN;
 // Pin 0 pour arrosage
 const int arrosagePin1 = 2;
 
-const unsigned long arrosageTime = 20 * 1000; // 20 secondes
+const unsigned long arrosageTime = 30 * 1000; // 30 secondes
 const unsigned long eventInterval = 60 * 60 * 12 * 1000 - arrosageTime; // toutes les 12 heures
 //const unsigned long arrosageTime = 2 * 1000;
 //const unsigned long eventInterval = 9 * 1000 - arrosageTime;
