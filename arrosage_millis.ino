@@ -14,10 +14,12 @@ const int ledPin =  0;//LED_BUILTIN;
 // Pin 0 pour arrosage
 const int arrosagePin1 = 2;
 
-const unsigned long arrosageTime = 30 * 1000; // 30 secondes
+const unsigned long arrosageTime = 32 * 1000; // 30 secondes
 const unsigned long eventInterval = 60 * 60 * 12 * 1000 - arrosageTime; // toutes les 12 heures
-//const unsigned long arrosageTime = 2 * 1000;
-//const unsigned long eventInterval = 9 * 1000 - arrosageTime;
+
+// Test values 
+//const unsigned long arrosageTime = 5 * 1000;
+//const unsigned long eventInterval = 20 * 1000 - arrosageTime;
 
 // frequence de clignotage de la led ( pour checker que ca tourne)
 const unsigned long ledTime = 500;
@@ -35,6 +37,7 @@ void setup() {
   digitalWrite(ledPin, HIGH);
   digitalWrite(arrosagePin1, HIGH);
   delay(1000);
+  
 }
 
 void loop() {
